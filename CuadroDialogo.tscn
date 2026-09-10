@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://CuadroDialogo.gd" type="Script" id=1]
+[ext_resource path="res://addons/v2.ogg" type="AudioStream" id=2]
+
+[node name="CuadroDialogo" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="PanelFondo" type="PanelContainer" parent="."]
+margin_right = 50.0
+margin_bottom = 94.0
+rect_min_size = Vector2( 50, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Contenido" type="VBoxContainer" parent="PanelFondo"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 43.0
+margin_bottom = 87.0
+
+[node name="NombrePersonaje" type="Label" parent="PanelFondo/Contenido"]
+margin_right = 36.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+autowrap = true
+
+[node name="TextoDialogo" type="Label" parent="PanelFondo/Contenido"]
+margin_top = 18.0
+margin_right = 36.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+autowrap = true
+
+[node name="ContenedorOpciones" type="VBoxContainer" parent="PanelFondo/Contenido"]
+margin_top = 36.0
+margin_right = 36.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="BtnOpcionA" type="Button" parent="PanelFondo/Contenido/ContenedorOpciones"]
+margin_right = 36.0
+margin_bottom = 20.0
+flat = true
+
+[node name="BtnOpcionB" type="Button" parent="PanelFondo/Contenido/ContenedorOpciones"]
+margin_top = 24.0
+margin_right = 36.0
+margin_bottom = 44.0
+flat = true
+
+[node name="TweenTexto" type="Tween" parent="."]
+
+[node name="AudioVoz" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )

@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://MenuInicio.gd" type="Script" id=1]
+
+[node name="MenuInicio" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_bottom = 2.0
+script = ExtResource( 1 )
+escena_juego = "res://Escena01_LaCasa.tscn"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.223529, 0.14902, 0.14902, 1 )
+
+[node name="ContenedorPrincipal" type="MarginContainer" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ContenidoCenter" type="VBoxContainer" parent="CanvasLayer/ContenedorPrincipal"]
+margin_left = 413.0
+margin_top = 227.0
+margin_right = 610.0
+margin_bottom = 372.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenidoCenter"]
+margin_right = 197.0
+margin_bottom = 31.0
+size_flags_horizontal = 4
+size_flags_vertical = 5
+text = "Corian: Las Sombras de Atl
+"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="BotonesContenedor" type="VBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenidoCenter"]
+margin_left = 49.0
+margin_top = 35.0
+margin_right = 148.0
+margin_bottom = 145.0
+size_flags_horizontal = 4
+custom_constants/separation = 10
+alignment = 1
+
+[node name="BtnJugar" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenidoCenter/BotonesContenedor"]
+margin_right = 99.0
+margin_bottom = 20.0
+text = "Jugar"
+
+[node name="BtnInstrucciones" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenidoCenter/BotonesContenedor"]
+margin_top = 30.0
+margin_right = 99.0
+margin_bottom = 50.0
+text = "Instrucciones"
+
+[node name="BtnCreditos" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenidoCenter/BotonesContenedor"]
+margin_top = 60.0
+margin_right = 99.0
+margin_bottom = 80.0
+text = "Creditos"
+
+[node name="BtnSalir" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenidoCenter/BotonesContenedor"]
+margin_top = 90.0
+margin_right = 99.0
+margin_bottom = 110.0
+text = "Salir"
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="."]
