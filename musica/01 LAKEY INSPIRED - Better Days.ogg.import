@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/01 LAKEY INSPIRED - Better Days.ogg-85deb844a04847e5913de68c1d2739de.oggstr"
+
+[deps]
+
+source_file="res://musica/01 LAKEY INSPIRED - Better Days.ogg"
+dest_files=[ "res://.import/01 LAKEY INSPIRED - Better Days.ogg-85deb844a04847e5913de68c1d2739de.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

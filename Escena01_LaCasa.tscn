@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Escena01_LaCasa.gd" type="Script" id=2]
 [ext_resource path="res://CuadroDialogo.tscn" type="PackedScene" id=3]
 [ext_resource path="res://pausa.tscn" type="PackedScene" id=4]
+[ext_resource path="res://musica/01 LAKEY INSPIRED - Better Days.ogg" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -42,6 +43,10 @@ shape = SubResource( 1 )
 
 [node name="pausa" parent="." instance=ExtResource( 4 )]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="musicaFondo1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -13.0
+pitch_scale = 0.7
+autoplay = true
 
 [connection signal="input_event" from="BandejaPasteles" to="." method="_on_BandejaPasteles_input_event"]

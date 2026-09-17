@@ -74,4 +74,4 @@ margin_right = 99.0
 margin_bottom = 110.0
 text = "Salir"
 
-[node name="MusicaFondo" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
