@@ -42,4 +42,6 @@ shape = SubResource( 1 )
 
 [node name="pausa" parent="." instance=ExtResource( 4 )]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="input_event" from="BandejaPasteles" to="." method="_on_BandejaPasteles_input_event"]

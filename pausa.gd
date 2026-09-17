@@ -31,8 +31,9 @@ func reanudar_juego():
 	get_tree().paused = false
 
 func _on_btn_exit_pressed():
-	get_tree().paused = false  # ¡Despausar antes de salir!
-	get_tree().quit()
-
+	print("SALIR PRESIONADO")
+	get_tree().paused = false
+	get_tree().change_scene("res://MenuInicio.tscn")
+	
 func _on_btn_options_pressed():
 	print("Botón de opciones presionado")
