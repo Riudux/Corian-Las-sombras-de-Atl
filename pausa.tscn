@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://pausa.gd" type="Script" id=1]
+[ext_resource path="res://ui/tema_interfaz.tres" type="Theme" id=2]
 
 [node name="pausa" type="CanvasLayer"]
 pause_mode = 2
@@ -24,21 +25,22 @@ custom_constants/separation = 21
 
 [node name="btn_reanudar" type="Button" parent="VBoxContainer"]
 margin_right = 276.0
-margin_bottom = 20.0
+margin_bottom = 18.0
 rect_pivot_offset = Vector2( 256, 131 )
+theme = ExtResource( 2 )
 text = "Reanudar"
 
 [node name="btn_options" type="Button" parent="VBoxContainer"]
-margin_top = 41.0
+margin_top = 39.0
 margin_right = 276.0
-margin_bottom = 61.0
+margin_bottom = 59.0
 rect_pivot_offset = Vector2( 256, 131 )
 text = "Opciones"
 
 [node name="btn_exit" type="Button" parent="VBoxContainer"]
-margin_top = 82.0
+margin_top = 80.0
 margin_right = 276.0
-margin_bottom = 102.0
+margin_bottom = 100.0
 rect_pivot_offset = Vector2( 256, 131 )
 text = "Guardar y Salir"
 

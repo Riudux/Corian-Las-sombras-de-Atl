@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://MenuInicio.gd" type="Script" id=1]
+[ext_resource path="res://ui/tema_interfaz.tres" type="Theme" id=2]
 
 [node name="MenuInicio" type="Control"]
 anchor_right = 1.0
@@ -23,9 +24,9 @@ anchor_bottom = 1.0
 
 [node name="ContenidoCenter" type="VBoxContainer" parent="CanvasLayer/ContenedorPrincipal"]
 margin_left = 413.0
-margin_top = 227.0
+margin_top = 228.0
 margin_right = 610.0
-margin_bottom = 372.0
+margin_bottom = 371.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
@@ -46,32 +47,33 @@ uppercase = true
 margin_left = 49.0
 margin_top = 35.0
 margin_right = 148.0
-margin_bottom = 145.0
+margin_bottom = 143.0
 size_flags_horizontal = 4
 custom_constants/separation = 10
 alignment = 1
 
 [node name="BtnJugar" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenidoCenter/BotonesContenedor"]
 margin_right = 99.0
-margin_bottom = 20.0
+margin_bottom = 18.0
+theme = ExtResource( 2 )
 text = "Jugar"
 
 [node name="BtnInstrucciones" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenidoCenter/BotonesContenedor"]
-margin_top = 30.0
+margin_top = 28.0
 margin_right = 99.0
-margin_bottom = 50.0
+margin_bottom = 48.0
 text = "Instrucciones"
 
 [node name="BtnCreditos" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenidoCenter/BotonesContenedor"]
-margin_top = 60.0
+margin_top = 58.0
 margin_right = 99.0
-margin_bottom = 80.0
+margin_bottom = 78.0
 text = "Creditos"
 
 [node name="BtnSalir" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenidoCenter/BotonesContenedor"]
-margin_top = 90.0
+margin_top = 88.0
 margin_right = 99.0
-margin_bottom = 110.0
+margin_bottom = 108.0
 text = "Salir"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
