@@ -25,9 +25,9 @@ anchor_bottom = 1.0
 
 [node name="ContenidoCenter" type="VBoxContainer" parent="CanvasLayer/ContenedorPrincipal"]
 margin_left = 413.0
-margin_top = 228.0
+margin_top = 213.0
 margin_right = 610.0
-margin_bottom = 372.0
+margin_bottom = 387.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
@@ -48,9 +48,9 @@ uppercase = true
 margin_left = 55.0
 margin_top = 35.0
 margin_right = 142.0
-margin_bottom = 144.0
+margin_bottom = 174.0
 size_flags_horizontal = 4
-custom_constants/separation = 10
+custom_constants/separation = 20
 alignment = 1
 
 [node name="BtnJugar" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenidoCenter/BotonesContenedor"]
@@ -60,23 +60,23 @@ theme = ExtResource( 2 )
 text = "Jugar"
 
 [node name="BtnInstrucciones" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenidoCenter/BotonesContenedor"]
-margin_top = 47.0
+margin_top = 57.0
 margin_right = 87.0
-margin_bottom = 61.0
+margin_bottom = 71.0
 theme = ExtResource( 3 )
 text = "Instrucciones"
 
 [node name="BtnCreditos" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenidoCenter/BotonesContenedor"]
-margin_top = 71.0
+margin_top = 91.0
 margin_right = 87.0
-margin_bottom = 85.0
+margin_bottom = 105.0
 theme = ExtResource( 3 )
 text = "Creditos"
 
 [node name="BtnSalir" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenidoCenter/BotonesContenedor"]
-margin_top = 95.0
+margin_top = 125.0
 margin_right = 87.0
-margin_bottom = 109.0
+margin_bottom = 139.0
 theme = ExtResource( 3 )
 text = "Salir"
 

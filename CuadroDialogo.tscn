@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://CuadroDialogo.gd" type="Script" id=1]
 [ext_resource path="res://addons/v2.ogg" type="AudioStream" id=2]
+[ext_resource path="res://ui/tema2_interfaz.tres" type="Theme" id=3]
 
 [node name="CuadroDialogo" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -37,19 +38,22 @@ autowrap = true
 [node name="ContenedorOpciones" type="VBoxContainer" parent="PanelFondo/Contenido"]
 margin_top = 36.0
 margin_right = 36.0
-margin_bottom = 80.0
+margin_bottom = 68.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
+theme = ExtResource( 3 )
 
 [node name="BtnOpcionA" type="Button" parent="PanelFondo/Contenido/ContenedorOpciones"]
 margin_right = 36.0
-margin_bottom = 20.0
+margin_bottom = 14.0
+theme = ExtResource( 3 )
 flat = true
 
 [node name="BtnOpcionB" type="Button" parent="PanelFondo/Contenido/ContenedorOpciones"]
-margin_top = 24.0
+margin_top = 18.0
 margin_right = 36.0
-margin_bottom = 44.0
+margin_bottom = 32.0
+theme = ExtResource( 3 )
 flat = true
 
 [node name="TweenTexto" type="Tween" parent="."]
