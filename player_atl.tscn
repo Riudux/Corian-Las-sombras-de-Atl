@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/atl.png" type="Texture" id=1]
+[ext_resource path="res://player_atl.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -19,7 +20,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=2]
 resource_name = "abajo"
-length = 0.5
+length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
@@ -35,7 +36,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=4]
 resource_name = "arriba"
-length = 0.5
+length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
@@ -51,7 +52,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=3]
 resource_name = "derecha"
-length = 0.5
+length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
@@ -67,7 +68,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=5]
 resource_name = "izquierda"
-length = 0.5
+length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
@@ -81,7 +82,12 @@ tracks/0/keys = {
 "values": [ 8, 11 ]
 }
 
+[sub_resource type="CircleShape2D" id=6]
+radius = 43.0
+
 [node name="player_atl" type="KinematicBody2D"]
+position = Vector2( 456, 256 )
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -94,3 +100,7 @@ anims/abajo = SubResource( 2 )
 anims/arriba = SubResource( 4 )
 anims/derecha = SubResource( 3 )
 anims/izquierda = SubResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 48 )
+shape = SubResource( 6 )
