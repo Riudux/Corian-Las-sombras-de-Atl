@@ -1,0 +1,98 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/sala_atl1.png" type="Texture" id=1]
+[ext_resource path="res://assets/jarrones_sala_atl1.png" type="Texture" id=2]
+[ext_resource path="res://assets/mesa_sala_atl1.png" type="Texture" id=3]
+[ext_resource path="res://player_atl.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sala_atl1.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 282.014, 37.1139 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 145.058, 49.3331 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 105.488, 60.4552 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 64.3646, 23.0168 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 44, 20 )
+
+[node name="sala_atl1" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="player_atl" parent="." instance=ExtResource( 4 )]
+position = Vector2( 508, 279 )
+
+[node name="SalaAtl1" type="Sprite" parent="."]
+position = Vector2( 509.5, 308.5 )
+scale = Vector2( 0.725142, 0.803385 )
+z_index = -1
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SalaAtl1"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SalaAtl1/StaticBody2D"]
+position = Vector2( -359.24, -145.8 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="SalaAtl1/StaticBody2D"]
+position = Vector2( 355.103, -145.8 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="SalaAtl1/StaticBody2D"]
+position = Vector2( -359.24, 377.776 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="SalaAtl1/StaticBody2D"]
+position = Vector2( 353.724, 377.776 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SalaAtl1/StaticBody2D"]
+polygon = PoolVector2Array( -499.902, -108.914, -214.441, -106.425, -213.062, -0.622345, -308.215, 0.622375, -306.836, 26.7617, -374.409, 31.7407, -375.788, 45.4327, -408.885, 46.6775, -407.506, 65.3484, -470.942, 67.8379, -470.942, 145.011, -483.354, 147.501, -483.354, 232.143, -521.967, 232.143, -526.104, 268.24, -453.015, 270.729, -455.773, 330.476, -615.741, 331.721, -611.604, -110.159 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="SalaAtl1/StaticBody2D"]
+position = Vector2( 476.199, -67.3817 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="MesaSalaAtl1" type="Sprite" parent="."]
+position = Vector2( 507, 408.75 )
+scale = Vector2( 0.767857, 0.835329 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MesaSalaAtl1"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MesaSalaAtl1/StaticBody2D"]
+position = Vector2( 1.30237, 4.48929 )
+shape = SubResource( 3 )
+
+[node name="JarronesSalaAtl1" type="Sprite" parent="."]
+position = Vector2( 911.5, 536.75 )
+scale = Vector2( 0.753521, 0.868932 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="JarronesSalaAtl1"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JarronesSalaAtl1/StaticBody2D"]
+position = Vector2( 2.65405, 21.0028 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 4 )
+
+[node name="puerta_sala_atl1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puerta_sala_atl1"]
+position = Vector2( 507, 184 )
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="puerta_sala_atl1" to="." method="_on_puerta_sala_atl1_body_entered"]

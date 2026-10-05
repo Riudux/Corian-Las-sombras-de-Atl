@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/habitacion_atl1.jpg" type="Texture" id=1]
 [ext_resource path="res://player_atl.tscn" type="PackedScene" id=2]
 [ext_resource path="res://habitacion_atl1.gd" type="Script" id=3]
 [ext_resource path="res://assets/puerta_habitacion_atl1.png" type="Texture" id=4]
+[ext_resource path="res://assets/maceta_habitacion_atl1.png" type="Texture" id=5]
 
 [sub_resource type="GDScript" id=9]
 script/source = "extends Sprite
@@ -40,7 +41,7 @@ extents = Vector2( 29.4724, 81.4424 )
 extents = Vector2( 278.021, 24.3006 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 30.8473, 52.017 )
+extents = Vector2( 34.6716, 34.9312 )
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 52.1575, 29.8688 )
@@ -99,7 +100,7 @@ polygon = PoolVector2Array( -316.766, 77.835, -190.28, 79.1006, -190.28, 49.9916
 polygon = PoolVector2Array( -21.1727, 58.8509, 51.6945, 58.8509, 53.0694, 86.6943, 113.563, 87.9599, 113.563, 132.256, 219.427, 133.522, 219.427, 87.9599, 288.169, 90.4911, 288.169, 52.5228, 469.65, 55.054, 461.401, -93.0223, -23.9224, -93.0223 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="HabitacionAtl1/StaticBody2D"]
-position = Vector2( -271.396, 288.053 )
+position = Vector2( -267.572, 305.139 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="HabitacionAtl1/StaticBody2D"]
@@ -125,5 +126,10 @@ shape = SubResource( 8 )
 position = Vector2( 825.263, 586.274 )
 scale = Vector2( 0.481752, 0.591836 )
 texture = ExtResource( 4 )
+
+[node name="MacetaHabitacionAtl1" type="Sprite" parent="."]
+position = Vector2( 369.737, 498.81 )
+scale = Vector2( 0.795195, 0.7975 )
+texture = ExtResource( 5 )
 
 [connection signal="body_entered" from="HabitacionAtl1/puerta_habitacion_atl" to="." method="_on_puerta_habitacion_atl_body_entered"]
