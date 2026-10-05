@@ -13,7 +13,7 @@ extents = Vector2( 282.014, 37.1139 )
 extents = Vector2( 145.058, 49.3331 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 105.488, 60.4552 )
+extents = Vector2( 117.209, 60.4552 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 64.3646, 23.0168 )
@@ -23,9 +23,6 @@ extents = Vector2( 44, 20 )
 
 [node name="sala_atl1" type="Node2D"]
 script = ExtResource( 5 )
-
-[node name="player_atl" parent="." instance=ExtResource( 4 )]
-position = Vector2( 508, 279 )
 
 [node name="SalaAtl1" type="Sprite" parent="."]
 position = Vector2( 509.5, 308.5 )
@@ -64,30 +61,37 @@ position = Vector2( 476.199, -67.3817 )
 scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
-[node name="MesaSalaAtl1" type="Sprite" parent="."]
+[node name="YSort" type="YSort" parent="."]
 position = Vector2( 507, 408.75 )
 scale = Vector2( 0.767857, 0.835329 )
+
+[node name="MesaSalaAtl1" type="Sprite" parent="YSort"]
+scale = Vector2( 1, 1 )
 texture = ExtResource( 3 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="MesaSalaAtl1"]
+[node name="StaticBody2D" type="StaticBody2D" parent="YSort/MesaSalaAtl1"]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MesaSalaAtl1/StaticBody2D"]
-position = Vector2( 1.30237, 4.48929 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/MesaSalaAtl1/StaticBody2D"]
+position = Vector2( 1.30231, 3.89072 )
 shape = SubResource( 3 )
 
-[node name="JarronesSalaAtl1" type="Sprite" parent="."]
-position = Vector2( 911.5, 536.75 )
-scale = Vector2( 0.753521, 0.868932 )
+[node name="JarronesSalaAtl1" type="Sprite" parent="YSort"]
+position = Vector2( 526.791, 153.233 )
+scale = Vector2( 0.98133, 1.04023 )
 texture = ExtResource( 2 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="JarronesSalaAtl1"]
+[node name="StaticBody2D" type="StaticBody2D" parent="YSort/JarronesSalaAtl1"]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="JarronesSalaAtl1/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/JarronesSalaAtl1/StaticBody2D"]
 position = Vector2( 2.65405, 21.0028 )
 scale = Vector2( 1, 1 )
 shape = SubResource( 4 )
+
+[node name="player_atl" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 1.30237, -155.328 )
+scale = Vector2( 0.911628, 0.837993 )
 
 [node name="puerta_sala_atl1" type="Area2D" parent="."]
 
