@@ -58,7 +58,7 @@ scale = Vector2( 0.95, 1.02 )
 script = ExtResource( 3 )
 
 [node name="player_atl" parent="." instance=ExtResource( 2 )]
-position = Vector2( 532.632, 403.922 )
+position = Vector2( 820, 480.392 )
 
 [node name="HabitacionAtl1" type="Sprite" parent="."]
 position = Vector2( 572, 275 )

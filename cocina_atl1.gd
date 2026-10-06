@@ -16,11 +16,6 @@ func _ready():
 #	pass
 
 
-func _on_puerta_sala_atl1_body_entered(body):
-	if body.name == "player_atl":
-		get_tree().change_scene("res://Habitacion_atl1.tscn")
-
-
 func _on_Area2D_body_entered(body):
-		if body.name == "player_atl":
-			get_tree().change_scene("res://cocina_atl1.tscn")
+	if body.name == "player_atl":
+		get_tree().change_scene("res://sala_atl1.tscn")

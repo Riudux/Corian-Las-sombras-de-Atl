@@ -18,4 +18,4 @@ func _ready():
 
 func _on_puerta_habitacion_atl_body_entered(body):
 	if body.name == "player_atl":
-		print("¡El jugador entró!")
+		get_tree().change_scene("res://sala_atl1.tscn")
