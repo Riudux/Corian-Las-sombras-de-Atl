@@ -128,7 +128,7 @@ scale = Vector2( 0.481752, 0.591836 )
 texture = ExtResource( 4 )
 
 [node name="MacetaHabitacionAtl1" type="Sprite" parent="."]
-position = Vector2( 369.737, 498.81 )
+position = Vector2( 366.579, 498.81 )
 scale = Vector2( 0.795195, 0.7975 )
 texture = ExtResource( 5 )
 
