@@ -18,4 +18,5 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	if body.name == "player_atl":
+		variables.posicion_entrada = "abajo1"
 		get_tree().change_scene("res://sala_atl1.tscn")

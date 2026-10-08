@@ -18,4 +18,5 @@ func _ready():
 
 func _on_puerta_habitacion_atl_body_entered(body):
 	if body.name == "player_atl":
+		variables.posicion_entrada = "arriba1" #donde quiero que mi personaje aparezca en la sig escena?
 		get_tree().change_scene("res://sala_atl1.tscn")
