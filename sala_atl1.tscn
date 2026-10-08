@@ -96,11 +96,10 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/JarronesSalaAtl1/StaticBody2D"]
 position = Vector2( -7.96277, 21.0028 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 4 )
 
 [node name="player_atl" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 0, -253.493 )
+position = Vector2( -1.30231, -218.776 )
 scale = Vector2( 0.911628, 0.837993 )
 
 [node name="puerta_sala_atl1" type="Area2D" parent="."]
