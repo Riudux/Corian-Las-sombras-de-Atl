@@ -11,9 +11,7 @@ class ProgresoJuego extends Model
     public $incrementing = false;
     protected $keyType = 'string';
     
-    protected $fillable = [
-        'nivel_actual', 'puntaje_total', 'estado_json', 'sincronizado_en'
-    ];
+    protected $fillable = ['jugador_id', 'nivel_actual', 'puntaje_total', 'estado_json', 'sincronizado_en'];
     
     public function jugador()
     {
