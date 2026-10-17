@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/index.apple-touch-icon.png-dcd2c094bfa3f769157f6f2ba930cc56.stex"
+path="res://.import/corian.apple-touch-icon.png-f80387d879623aac968f8ac13a03d494.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/index.apple-touch-icon.png"
-dest_files=[ "res://.import/index.apple-touch-icon.png-dcd2c094bfa3f769157f6f2ba930cc56.stex" ]
+source_file="res://build/corian.apple-touch-icon.png"
+dest_files=[ "res://.import/corian.apple-touch-icon.png-f80387d879623aac968f8ac13a03d494.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/index.png-659c11691fe5279cf81f33eb936290a4.stex"
+path="res://.import/corian.png-e289b8add62b1572e7ab052b24d2774a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/index.png"
-dest_files=[ "res://.import/index.png-659c11691fe5279cf81f33eb936290a4.stex" ]
+source_file="res://build/corian.png"
+dest_files=[ "res://.import/corian.png-e289b8add62b1572e7ab052b24d2774a.stex" ]
 
 [params]
 
