@@ -1,6 +1,6 @@
 # Corian: Las sombras de Atl
 
-Corian: Las sombras de Atl es un proyecto de videojuego ambientado en un mundo misterioso y oscuro, donde el jugador explora entornos narrativos, enfrenta amenazas y avanza a través de una historia envolvente. El repositorio reúne tanto el desarrollo del juego como la parte administrativa o complementaria del proyecto, combinando tecnologías como Godot, GDScript, PHP y Blade.
+Corian: Las sombras de Atl es un proyecto de videojuego enfocado principalmente en la enseñanza y consciencia de la honestidad y valores para los niños, este mismo esta ambientado en un mundo misterioso y oscuro, donde el jugador explora entornos narrativos, enfrenta amenazas y avanza a través de una historia envolvente. El repositorio reúne tanto el desarrollo del juego como la parte administrativa o complementaria del proyecto, combinando tecnologías como Godot, GDScript, PHP y Blade.
 
 ## Índice
 
