@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Requests\SincronizacionRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -25,13 +26,9 @@ class SincronizacionController extends Controller
     }
 
     // 2. FLUJO DE SUBIDA (PUSH MASIVO OFFLINE-FIRST)
-    public function sincronizarDatos(Request $request)
+    public function sincronizarDatos(SincronizacionRequest $request)
     {
         $jugadores = $request->input('jugadores', []);
-
-        if (empty($jugadores)) {
-            return response()->json(['mensaje' => 'El JSON está vacío o mal estructurado'], 400);
-        }
 
         // Bloqueo de seguridad ACID: Todo o nada.
         DB::beginTransaction();
