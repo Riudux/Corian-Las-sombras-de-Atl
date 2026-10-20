@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\SincronizacionController;
+use App\Http\Controllers\Api\SesionAnonimaController;
 
 // Agrupamos las rutas bajo un prefijo profesional y versionado
 Route::prefix('v1/sincronizacion')->group(function () {
@@ -12,4 +13,10 @@ Route::prefix('v1/sincronizacion')->group(function () {
     // Flujo de Subida (Push) - El endpoint masivo para recibir todo el progreso offline
     Route::post('/push', [SincronizacionController::class, 'sincronizarDatos']);
 
+});
+
+
+Route::prefix('v1/sesiones')->group(function () {
+    Route::post('/generar', [SesionAnonimaController::class, 'generarToken']);
+    Route::post('/validar', [SesionAnonimaController::class, 'validarRecuperacion']);
 });
