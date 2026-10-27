@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "DialogueResource",
+"language": "GDScript",
+"path": "res://addons/dialogue_manager/dialogue_resource.gd"
+} ]
+_global_script_class_icons={
+"DialogueResource": ""
+}
+
 [application]
 
 config/name="godgame"
@@ -17,6 +27,7 @@ config/icon="res://icon.png"
 [autoload]
 
 variables="*res://variables.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [debug]
 
@@ -25,6 +36,10 @@ settings/fps/force_fps=60
 [display]
 
 window/stretch/mode="2d"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg" )
 
 [gui]
 

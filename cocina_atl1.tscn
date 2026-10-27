@@ -34,12 +34,10 @@ z_index = -1
 texture = ExtResource( 3 )
 
 [node name="RigidBody2D" type="StaticBody2D" parent="CocinaAtl1"]
-scale = Vector2( 1, 1 )
 collision_mask = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CocinaAtl1/RigidBody2D"]
 position = Vector2( -354.75, -135.642 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CocinaAtl1/RigidBody2D"]
@@ -48,52 +46,42 @@ shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="CocinaAtl1/RigidBody2D"]
 position = Vector2( -357.5, 359.801 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="CocinaAtl1/RigidBody2D"]
 position = Vector2( 356.125, 359.801 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="CocinaAtl1/RigidBody2D"]
 position = Vector2( -299.578, -61.1343 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="CocinaAtl1/RigidBody2D"]
 position = Vector2( 302.156, -56.6766 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="CocinaAtl1/RigidBody2D"]
 position = Vector2( 576.125, 117.174 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="CocinaAtl1/RigidBody2D"]
 position = Vector2( -584.375, 222.249 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="CocinaAtl1/RigidBody2D"]
 position = Vector2( 1.375, 140.943 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="CocinaAtl1/RigidBody2D"]
 position = Vector2( 490.875, 307.582 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="CocinaAtl1/RigidBody2D"]
 position = Vector2( -515.625, 285.93 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="CocinaAtl1/RigidBody2D"]
 position = Vector2( -5.50006, 382.726 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 5 )
 
 [node name="Area2D" type="Area2D" parent="CocinaAtl1"]
@@ -101,14 +89,12 @@ position = Vector2( -37.125, -27.3831 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CocinaAtl1/Area2D"]
 position = Vector2( 31.625, -124.816 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 6 )
 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="player_atl" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 511, 200 )
-scale = Vector2( 0.7, 0.7 )
 
 [node name="JarronesCocinaAtl1" type="Sprite" parent="YSort"]
 position = Vector2( 871.955, 529 )
