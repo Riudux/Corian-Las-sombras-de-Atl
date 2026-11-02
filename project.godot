@@ -28,6 +28,7 @@ config/icon="res://icon.png"
 
 variables="*res://variables.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+ProgresoJuego="*res://ProgresoJuego.gd"
 
 [debug]
 
