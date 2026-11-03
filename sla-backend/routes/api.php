@@ -1,5 +1,7 @@
 <?php
 
+
+use App\Http\Controllers\Api\MetricasPublicasController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\SincronizacionController;
 use App\Http\Controllers\Api\SesionAnonimaController;
@@ -19,4 +21,9 @@ Route::prefix('v1/sincronizacion')->group(function () {
 Route::prefix('v1/sesiones')->group(function () {
     Route::post('/generar', [SesionAnonimaController::class, 'generarToken']);
     Route::post('/validar', [SesionAnonimaController::class, 'validarRecuperacion']);
+});
+
+
+Route::prefix('v1/metricas')->group(function () {
+    Route::get('/publicas/resumen', [MetricasPublicasController::class, 'obtenerResumen']);
 });
