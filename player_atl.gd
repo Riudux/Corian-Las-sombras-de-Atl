@@ -9,7 +9,7 @@ onready var animacion = $Sprite/AnimationPlayer
 func _physics_process(delta):
 
 	# Si está en un diálogo o evento, detiene la animación y frena el movimiento
-	if not puedo_moverme:
+	if not puedo_moverme or DialogueManager.is_dialogue_running:
 		animacion.stop()
 		return
 

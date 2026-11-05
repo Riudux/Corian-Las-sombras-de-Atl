@@ -1,0 +1,50 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 8
+syntax_version = 2
+raw_text = "~ start
+Mamá: Atl... faltan conchitas.
+Mamá: Te dije que estaban contadas. Abre la puerta, por favor.
+Mamá: Tenemos que hablar de lo que hiciste."
+errors = [  ]
+titles = {
+"start": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "start",
+"type": "title"
+},
+"1": {
+"character": "Mamá",
+"character_replacements": [  ],
+"next_id": "2",
+"replacements": [  ],
+"text": "Atl... faltan conchitas.",
+"translation_key": "Atl... faltan conchitas.",
+"type": "dialogue"
+},
+"2": {
+"character": "Mamá",
+"character_replacements": [  ],
+"next_id": "3",
+"replacements": [  ],
+"text": "Te dije que estaban contadas. Abre la puerta, por favor.",
+"translation_key": "Te dije que estaban contadas. Abre la puerta, por favor.",
+"type": "dialogue"
+},
+"3": {
+"character": "Mamá",
+"character_replacements": [  ],
+"next_id": "",
+"replacements": [  ],
+"text": "Tenemos que hablar de lo que hiciste.",
+"translation_key": "Tenemos que hablar de lo que hiciste.",
+"type": "dialogue"
+}
+}

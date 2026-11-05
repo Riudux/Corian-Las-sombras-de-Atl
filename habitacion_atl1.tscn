@@ -5,7 +5,7 @@
 [ext_resource path="res://habitacion_atl1.gd" type="Script" id=3]
 [ext_resource path="res://assets/puerta_habitacion_atl1.png" type="Texture" id=4]
 [ext_resource path="res://assets/maceta_habitacion_atl1.png" type="Texture" id=5]
-[ext_resource path="res://dialogues/dialVentana.tres" type="Resource" id=6]
+[ext_resource path="res://dialogues/ventana_escape.tres" type="Resource" id=6]
 [ext_resource path="res://ZonaDialogo.gd" type="Script" id=7]
 
 [sub_resource type="GDScript" id=9]
@@ -56,6 +56,9 @@ extents = Vector2( 43.9111, 44.2964 )
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 107.355, 44.2964 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 38, 75 )
 
 [node name="habitacion_atl1" type="Node2D"]
 position = Vector2( -30, 25 )
@@ -123,8 +126,10 @@ polygon = PoolVector2Array( 491.648, 160.1, 491.648, 195.537, 502.646, 195.537, 
 position = Vector2( 0, 2.53122 )
 scale = Vector2( 0.985441, 1.06466 )
 collision_layer = 4
+collision_mask = 2
 script = ExtResource( 7 )
 dialogo_resource = ExtResource( 6 )
+requerir_escape = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HabitacionAtl1/dialVentana"]
 position = Vector2( -59.155, -10.1043 )
@@ -137,6 +142,13 @@ collision_layer = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HabitacionAtl1/puerta_habitacion_atl"]
 position = Vector2( 325.911, 453.507 )
 shape = SubResource( 11 )
+
+[node name="PuertaBloqueada" type="StaticBody2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuertaBloqueada"]
+position = Vector2( 825, 575 )
+shape = SubResource( 12 )
 
 [node name="PuertaHabitacionAtl1" type="Sprite" parent="."]
 position = Vector2( 825.263, 586.274 )

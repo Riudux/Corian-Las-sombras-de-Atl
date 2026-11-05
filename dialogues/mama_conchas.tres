@@ -1,0 +1,50 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 8
+syntax_version = 2
+raw_text = "~ start
+Mamá: Atl, cuídame las conchitas. Tengo que salir un momento.
+Mamá: Están contadas, ¿eh? No las toques.
+Mamá: Regreso enseguida."
+errors = [  ]
+titles = {
+"start": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "start",
+"type": "title"
+},
+"1": {
+"character": "Mamá",
+"character_replacements": [  ],
+"next_id": "2",
+"replacements": [  ],
+"text": "Atl, cuídame las conchitas. Tengo que salir un momento.",
+"translation_key": "Atl, cuídame las conchitas. Tengo que salir un momento.",
+"type": "dialogue"
+},
+"2": {
+"character": "Mamá",
+"character_replacements": [  ],
+"next_id": "3",
+"replacements": [  ],
+"text": "Están contadas, ¿eh? No las toques.",
+"translation_key": "Están contadas, ¿eh? No las toques.",
+"type": "dialogue"
+},
+"3": {
+"character": "Mamá",
+"character_replacements": [  ],
+"next_id": "",
+"replacements": [  ],
+"text": "Regreso enseguida.",
+"translation_key": "Regreso enseguida.",
+"type": "dialogue"
+}
+}

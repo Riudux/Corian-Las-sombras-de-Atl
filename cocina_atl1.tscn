@@ -1,10 +1,12 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://player_atl.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/jarrones_cocina_atl1.png" type="Texture" id=2]
 [ext_resource path="res://assets/cocina_atl1.png" type="Texture" id=3]
 [ext_resource path="res://assets/mesa_cocina_atl1.png" type="Texture" id=4]
 [ext_resource path="res://cocina_atl1.gd" type="Script" id=5]
+[ext_resource path="res://ConchaInteractiva.gd" type="Script" id=6]
+[ext_resource path="res://assets/concha_placeholder.svg" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 283, 28.5622 )
@@ -26,6 +28,8 @@ extents = Vector2( 48.3125, 15.1891 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 69.4375, 17.194 )
+
+[sub_resource type="CircleShape2D" id=8]
 
 [node name="cocina_atl1" type="Node2D"]
 script = ExtResource( 5 )
@@ -116,6 +120,79 @@ texture = ExtResource( 2 )
 position = Vector2( 514.75, 401 )
 scale = Vector2( 0.747728, 0.787879 )
 texture = ExtResource( 4 )
+
+[node name="Conchas" type="Node2D" parent="."]
+position = Vector2( 0, -3.05176e-05 )
+
+[node name="Concha1" type="Area2D" parent="Conchas" groups=["conchas_cocina"]]
+position = Vector2( 475, 363 )
+collision_layer = 4
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Conchas/Concha1"]
+position = Vector2( 7, -11 )
+scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conchas/Concha1"]
+position = Vector2( 6, -9.99997 )
+shape = SubResource( 8 )
+
+[node name="Concha2" type="Area2D" parent="Conchas" groups=["conchas_cocina"]]
+position = Vector2( 505, 363 )
+collision_layer = 4
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Conchas/Concha2"]
+position = Vector2( 9, 5.00003 )
+scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conchas/Concha2"]
+position = Vector2( 8, 6.00003 )
+shape = SubResource( 8 )
+
+[node name="Concha3" type="Area2D" parent="Conchas" groups=["conchas_cocina"]]
+position = Vector2( 535, 363 )
+collision_layer = 4
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Conchas/Concha3"]
+position = Vector2( 4, -8.99997 )
+scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conchas/Concha3"]
+position = Vector2( 3, -8.99997 )
+shape = SubResource( 8 )
+
+[node name="Concha4" type="Area2D" parent="Conchas" groups=["conchas_cocina"]]
+position = Vector2( 565, 363 )
+collision_layer = 4
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Conchas/Concha4"]
+position = Vector2( -23, 14 )
+scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conchas/Concha4"]
+position = Vector2( -23, 15 )
+shape = SubResource( 8 )
+
+[node name="Concha5" type="Area2D" parent="Conchas" groups=["conchas_cocina"]]
+position = Vector2( 595, 363 )
+collision_layer = 4
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Conchas/Concha5"]
+position = Vector2( -110, 15 )
+scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conchas/Concha5"]
+position = Vector2( -111, 14 )
+shape = SubResource( 8 )
 
 [connection signal="body_entered" from="CocinaAtl1/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="CocinaAtl1/salida" to="." method="_on_salida_body_entered"]

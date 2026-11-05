@@ -1,0 +1,33 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 8
+syntax_version = 2
+raw_text = "~ start
+Atl: ¿Comer concha?
+- Sí => comer
+- No => no_comer
+
+~ comer
+Atl: Está deliciosa...
+
+~ no_comer
+Atl: Mejor no."
+errors = [  ]
+titles = {
+"comer": "5",
+"no_comer": "7",
+"start": "1"
+}
+lines = {
+"0": {"next_id": "1", "text": "start", "type": "title"},
+"1": {"character": "Atl", "character_replacements": [  ], "next_id": "2", "replacements": [  ], "text": "¿Comer concha?", "translation_key": "¿Comer concha?", "type": "dialogue"},
+"2": {"next_id": "3", "next_id_after": "5", "responses": PoolStringArray( "3", "4" ), "replacements": [  ], "text": "", "type": "response"},
+"3": {"next_id": "5", "next_id_after": "5", "replacements": [  ], "text": "Sí", "translation_key": "Sí", "type": "response"},
+"4": {"next_id": "7", "next_id_after": "5", "replacements": [  ], "text": "No", "translation_key": "No", "type": "response"},
+"5": {"character": "Atl", "character_replacements": [  ], "next_id": "", "replacements": [  ], "text": "Está deliciosa...", "translation_key": "Está deliciosa...", "type": "dialogue"},
+"7": {"character": "Atl", "character_replacements": [  ], "next_id": "", "replacements": [  ], "text": "Mejor no.", "translation_key": "Mejor no.", "type": "dialogue"}
+}

@@ -3,6 +3,7 @@ extends Area2D
 export(Array, Resource) var lista_dialogos = []
 export(String) var titulo_seccion = "start"
 export(String) var nombre_jugador = "player_atl"
+export(bool) var requerir_escape = false
 export(bool) var repetir_ultimo = true 
 
 var procesando_evento: bool = false
@@ -13,6 +14,8 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name == nombre_jugador and not procesando_evento:
+		if requerir_escape and not variables.escape_desbloqueado:
+			return
 		if lista_dialogos.size() == 0:
 			print("Advertencia: No hay diálogos asignados en la lista para ", name)
 			return
@@ -39,11 +42,8 @@ func _on_body_entered(body):
 			body.puedo_moverme = false
 
 		# 3. Inicia el diálogo y obtiene la instancia real del globo
-		var balloon = yield(DialogueManager.show_example_dialogue_balloon(titulo_seccion, dialogo_actual), "completed")
-		
-		# 4. Esperar a que la ventana del diálogo se cierre y destruya por completo
-		if is_instance_valid(balloon):
-			yield(balloon, "tree_exited")
+		DialogueManager.show_example_dialogue_balloon(titulo_seccion, dialogo_actual)
+		yield(DialogueManager, "dialogue_finished")
 
 		# 5. Guardar el siguiente índice en el Autoload usando la ruta única
 		if indice_actual < lista_dialogos.size() - 1:

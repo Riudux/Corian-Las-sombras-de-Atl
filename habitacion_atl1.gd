@@ -8,7 +8,35 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var barrera = get_node_or_null("PuertaBloqueada/CollisionShape2D")
+	if barrera:
+		# La puerta funciona normalmente al inicio. Se bloquea al volver después de comer.
+		barrera.disabled = not (variables.comio_concha and variables.dialogo_reclamo_visto)
+
+	if variables.comio_concha and not variables.dialogo_reclamo_visto:
+		yield(get_tree(), "idle_frame")
+		mostrar_reclamo_mama()
+
+func mostrar_reclamo_mama():
+	var jugador = get_node_or_null("player_atl")
+	var barrera = get_node_or_null("PuertaBloqueada/CollisionShape2D")
+	if barrera:
+		barrera.disabled = false
+	if jugador:
+		jugador.puedo_moverme = false
+
+	DialogueManager.show_example_dialogue_balloon(
+		"start",
+		preload("res://dialogues/mama_reclamo.tres")
+	)
+	yield(DialogueManager, "dialogue_finished")
+
+	variables.dialogo_reclamo_visto = true
+	variables.madre_llamo = true
+	variables.escape_desbloqueado = true
+	# La puerta sigue bloqueada: la ruta narrativa de escape es la ventana.
+	if jugador and is_instance_valid(jugador):
+		jugador.puedo_moverme = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

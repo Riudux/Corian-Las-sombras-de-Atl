@@ -1,0 +1,40 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 8
+syntax_version = 2
+raw_text = "~ start
+Atl: Quiero una concha... Mamá no se va a enojar, soy su hijo.
+Atl: ¿Qué tiene de malo si desaparece una o dos?"
+errors = [  ]
+titles = {
+"start": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "start",
+"type": "title"
+},
+"1": {
+"character": "Atl",
+"character_replacements": [  ],
+"next_id": "2",
+"replacements": [  ],
+"text": "Quiero una concha... Mamá no se va a enojar, soy su hijo.",
+"translation_key": "Quiero una concha... Mamá no se va a enojar, soy su hijo.",
+"type": "dialogue"
+},
+"2": {
+"character": "Atl",
+"character_replacements": [  ],
+"next_id": "",
+"replacements": [  ],
+"text": "¿Qué tiene de malo si desaparece una o dos?",
+"translation_key": "¿Qué tiene de malo si desaparece una o dos?",
+"type": "dialogue"
+}
+}

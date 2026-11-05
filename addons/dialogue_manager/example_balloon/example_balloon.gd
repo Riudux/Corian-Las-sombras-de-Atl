@@ -90,6 +90,8 @@ func _unhandled_input(_event: InputEvent) -> void:
 
 
 func next(next_id: String) -> void:
+	if dialogue_line.responses.size() > 0:
+		DialogueManager.emit_signal("response_selected", next_id)
 	emit_signal("actioned", next_id)
 	queue_free()
 

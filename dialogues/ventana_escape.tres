@@ -1,0 +1,40 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 8
+syntax_version = 2
+raw_text = "~ start
+Atl: La puerta... mamá quiere que abra.
+Atl: No puedo quedarme aquí. Tengo que escapar por la ventana."
+errors = [  ]
+titles = {
+"start": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "start",
+"type": "title"
+},
+"1": {
+"character": "Atl",
+"character_replacements": [  ],
+"next_id": "2",
+"replacements": [  ],
+"text": "La puerta... mamá quiere que abra.",
+"translation_key": "La puerta... mamá quiere que abra.",
+"type": "dialogue"
+},
+"2": {
+"character": "Atl",
+"character_replacements": [  ],
+"next_id": "",
+"replacements": [  ],
+"text": "No puedo quedarme aquí. Tengo que escapar por la ventana.",
+"translation_key": "No puedo quedarme aquí. Tengo que escapar por la ventana.",
+"type": "dialogue"
+}
+}

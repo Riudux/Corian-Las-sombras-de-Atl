@@ -3,6 +3,7 @@ extends Node
 
 signal dialogue_started
 signal dialogue_finished
+signal response_selected(next_id)
 signal bridge_get_next_dialogue_line_completed(line)
 
 
