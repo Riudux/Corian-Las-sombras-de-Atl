@@ -128,8 +128,9 @@ scale = Vector2( 0.985441, 1.06466 )
 collision_layer = 4
 collision_mask = 2
 script = ExtResource( 7 )
-dialogo_resource = ExtResource( 6 )
+lista_dialogos = [ ExtResource( 6 ) ]
 requerir_escape = true
+escena_siguiente = "res://parte_trasera.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HabitacionAtl1/dialVentana"]
 position = Vector2( -59.155, -10.1043 )

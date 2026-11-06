@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://player_atl.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/parte_trasera1.png" type="Texture" id=2]
+[ext_resource path="res://assets/casa_parte_trasera.png" type="Texture" id=3]
+[ext_resource path="res://parte_trasera.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 686.411, 39.2093 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 91, 10 )
+
+[node name="parte_trasera" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="ParteTrasera1" type="Sprite" parent="."]
+position = Vector2( 514.5, 302 )
+scale = Vector2( 0.776, 0.822917 )
+texture = ExtResource( 2 )
+
+[node name="player_atl" parent="." instance=ExtResource( 1 )]
+position = Vector2( 558, 426 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="CasaParteTrasera" type="Sprite" parent="."]
+position = Vector2( 517, 479.625 )
+scale = Vector2( 0.778689, 0.838589 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CasaParteTrasera"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CasaParteTrasera/StaticBody2D"]
+position = Vector2( 4.49457, 57.6862 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CasaParteTrasera/StaticBody2D"]
+polygon = PoolVector2Array( -341.6, -35.3273, -342.884, -83.0264, -324.905, -78.2565, -287.663, -90.1813, -265.832, -104.491, -285.095, -179.617, -247.853, -190.35, -224.737, -193.927, -214.463, -236.856, -191.348, -238.049, -156.674, -240.434, -148.969, -264.283, -129.705, -252.359, -107.874, -261.898, -123.284, -294.095, -122, -315.56, -120.716, -347.757, -163.095, -350.142, -161.811, -396.649, -178.505, -447.925, -133.558, -447.925, -105.305, -461.043, -104.021, -580.291, -643.39, -580.291, -639.537, -26.9799, -378.842, 7.60205 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CasaParteTrasera/StaticBody2D"]
+polygon = PoolVector2Array( 321.052, 7.60205, 353.158, -40.0972, 204.189, -105.684, 202.905, -128.341, 141.263, -124.763, 100.168, -158.153, 91.1788, -191.542, 91.1788, -241.626, 92.463, -278.593, 123.284, -279.786, 110.442, -295.288, 79.6209, -303.635, 80.9051, -334.64, 107.874, -381.146, 128.421, -390.686, 127.137, -412.151, 89.8946, -424.076, 89.8946, -529.014, 133.558, -582.675, 526.526, -583.868, 496.989, 12.3719 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="CasaParteTrasera/StaticBody2D"]
+polygon = PoolVector2Array( -70.6317, -137.881, -57.7896, -110.453, -73.2001, -97.3362, -105.305, -100.914, -151.537, -96.1437, -166.948, -122.378, -169.516, -142.65, -164.379, -152.19, -155.39, -209.429, -113.011, -233.279, -91.1791, -217.777 )
+
+[node name="entrada_bosque" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="colision_entrada_bosque" type="CollisionShape2D" parent="entrada_bosque"]
+position = Vector2( 525, -20 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="entrada_bosque" to="." method="_on_entrada_bosque_body_entered"]

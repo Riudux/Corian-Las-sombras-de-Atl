@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cocina_atl1.jpg-da2376e4416f15f5632358e4aeb50294.stex"
+path="res://.import/bosque1.jpg-d627f328757641fc261a7e12f014c398.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cocina_atl1.jpg"
-dest_files=[ "res://.import/cocina_atl1.jpg-da2376e4416f15f5632358e4aeb50294.stex" ]
+source_file="res://assets/bosque1.jpg"
+dest_files=[ "res://.import/bosque1.jpg-d627f328757641fc261a7e12f014c398.stex" ]
 
 [params]
 

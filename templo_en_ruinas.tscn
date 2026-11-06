@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://player_atl.tscn" type="PackedScene" id=1]
+[ext_resource path="res://templo_en_ruinas.gd" type="Script" id=2]
+[ext_resource path="res://assets/templo_en_ruinas.png" type="Texture" id=3]
+[ext_resource path="res://assets/arbol_templo_en_ruinas.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 198.25, 25 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 67, 31 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 16, 112.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 15.375, 49.625 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 28, 9.75 )
+
+[node name="parte_trasera_casa" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TemploEnRuinas" type="Sprite" parent="."]
+position = Vector2( 868, 485 )
+scale = Vector2( 0.503906, 0.540179 )
+texture = ExtResource( 3 )
+offset = Vector2( -696.558, -340.628 )
+
+[node name="player_atl" parent="." instance=ExtResource( 1 )]
+position = Vector2( 487, 504 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ArbolTemploEnRuinas" type="Sprite" parent="."]
+position = Vector2( 80.5, 414 )
+scale = Vector2( 0.529052, 0.565757 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 3, 337, 129, 360, 137, 387, 167, 397, 189, 382, 192, 368, 158, 349, 153, 340, 177, 329, 193, 324, 236, 334, 266, 302, 296, 310, 328, 276, 363, 284, 386, 268, 398, 302, 437, 317, 479, 332, 563, 335, 642, 283, 646, 200, 4, 257 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 536, 651 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 992, 247 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1057, 397.5 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 320, 660 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 752, 685 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PoolVector2Array( 6, 447, 161, 449, 201, 472, 215, 472, 228, 457, 251, 459, 253, 475, 270, 477, 274, 490, 285, 490, 285, 509, 297, 509, 297, 527, 304, 524, 311, 513, 317, 513, 320, 505, 337, 504, 345, 518, 347, 518, 348, 483, 367, 488, 372, 504, 396, 485, 403, 492, 389, 514, 408, 518, 383, 526, 403, 541, 410, 563, 401, 595, 4, 594 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( -7.375, 390.375 )
+shape = SubResource( 4 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
+polygon = PoolVector2Array( 641, 284, 669, 285, 668, 350, 652, 351, 652, 378, 666, 380, 668, 398, 649, 424, 649, 446, 631, 443, 607, 427, 559, 444, 552, 467, 538, 488, 542, 510, 584, 532, 612, 532, 640, 521, 661, 492, 668, 450, 744, 486, 767, 460, 766, 435, 811, 436, 809, 399, 812, 396, 811, 370, 869, 369, 870, 394, 880, 399, 874, 428, 918, 430, 918, 402, 963, 402, 967, 228, 643, 240 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4"]
+polygon = PoolVector2Array( 678, 599, 682, 595, 678, 585, 691, 584, 692, 577, 704, 582, 708, 576, 718, 576, 728, 571, 719, 557, 730, 552, 730, 535, 751, 540, 768, 540, 787, 542, 786, 546, 793, 555, 822, 554, 822, 576, 843, 575, 835, 557, 844, 552, 861, 562, 864, 521, 885, 520, 894, 551, 912, 551, 916, 571, 929, 567, 940, 538, 936, 518, 960, 519, 969, 512, 979, 514, 986, 511, 1002, 521, 1023, 512, 1024, 596 )
+
+[node name="entrada_templo" type="Area2D" parent="."]
+
+[node name="colision_entrada_templo" type="CollisionShape2D" parent="entrada_templo"]
+position = Vector2( 839, 364.75 )
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="entrada_templo" to="." method="_on_entrada_templo_body_entered"]

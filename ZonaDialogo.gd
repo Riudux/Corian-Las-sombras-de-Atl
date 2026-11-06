@@ -4,6 +4,7 @@ export(Array, Resource) var lista_dialogos = []
 export(String) var titulo_seccion = "start"
 export(String) var nombre_jugador = "player_atl"
 export(bool) var requerir_escape = false
+export(String, FILE, "*.tscn") var escena_siguiente = ""
 export(bool) var repetir_ultimo = true 
 
 var procesando_evento: bool = false
@@ -52,6 +53,9 @@ func _on_body_entered(body):
 		# 6. Devuelve el control al jugador al finalizar
 		if "puedo_moverme" in body:
 			body.puedo_moverme = true
+
+		if escena_siguiente != "":
+			get_tree().change_scene(escena_siguiente)
 
 func _on_body_exited(body):
 	if body.name == nombre_jugador:
