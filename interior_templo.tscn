@@ -1,0 +1,83 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://player_atl.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/interior_templo.png" type="Texture" id=2]
+[ext_resource path="res://assets/columna_interior_templo4.png" type="Texture" id=3]
+[ext_resource path="res://interior_templo.gd" type="Script" id=4]
+[ext_resource path="res://assets/columna_interior_templo1.png" type="Texture" id=5]
+[ext_resource path="res://assets/columna_interior_templo2.png" type="Texture" id=6]
+[ext_resource path="res://assets/columna_interior_templo3.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 25, 22 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 20, 14.5 )
+
+[node name="interior_templo" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="InteriorTemplo" type="Sprite" parent="."]
+position = Vector2( 508.776, 299.25 )
+scale = Vector2( 1.03667, 1.08676 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 0, 1 )
+polygon = PoolVector2Array( 474, 329, 466, 319, 463, 309, 461, 300, 461, 288, 469, 271, 481, 261, 500, 254, 509, 252, 536, 260, 548, 274, 556, 299, 549, 322, 532, 338, 511, 345 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 265, 197 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 244, 375 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 775, 373 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 753, 190 )
+shape = SubResource( 1 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 169, 353, 166, 276, 179, 225, 218, 171, 314, 106, 374, 83, 375, 124, 402, 124, 403, 134, 638, 137, 641, 110, 682, 108, 682, 98, 729, 122, 788, 165, 835, 221, 848, 254, 853, 321, 844, 373, 826, 427, 797, 482, 757, 527, 721, 555, 915, 544, 903, 68, 202, 64, 102, 344 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 169, 360, 184, 410, 219, 473, 264, 529, 307, 561, 352, 582, 416, 603, 458, 603, 472, 477, 471, 589, 551, 586, 543, 474, 563, 589, 594, 598, 655, 586, 713, 559, 713, 611, 168, 603 )
+
+[node name="salida_interior_templo" type="Area2D" parent="."]
+
+[node name="colision_salida_interior_templo" type="CollisionShape2D" parent="salida_interior_templo"]
+position = Vector2( 509, 580 )
+shape = SubResource( 2 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="player_atl" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 511, 532 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColumnaInteriorTemplo2" type="Sprite" parent="YSort"]
+position = Vector2( 247.895, 318.064 )
+scale = Vector2( 1.1244, 1.08742 )
+texture = ExtResource( 6 )
+
+[node name="ColumnaInteriorTemplo4" type="Sprite" parent="YSort"]
+position = Vector2( 775, 311.807 )
+scale = Vector2( 1.14542, 1.16433 )
+texture = ExtResource( 3 )
+
+[node name="ColumnaInteriorTemplo3" type="Sprite" parent="YSort"]
+position = Vector2( 513.5, 114.185 )
+scale = Vector2( 1.14542, 1.12446 )
+texture = ExtResource( 7 )
+
+[node name="ColumnaInteriorTemplo1" type="Sprite" parent="YSort"]
+position = Vector2( 265.5, 115 )
+scale = Vector2( 1.04412, 1.09091 )
+texture = ExtResource( 5 )
