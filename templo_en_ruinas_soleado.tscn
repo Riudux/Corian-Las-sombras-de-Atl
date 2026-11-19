@@ -1,0 +1,112 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://player_atl.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/templo_en_ruinas_soleado.png" type="Texture" id=2]
+[ext_resource path="res://assets/arbol_templo_en_ruinas_soleado3.png" type="Texture" id=3]
+[ext_resource path="res://assets/arbol_templo_en_ruinas_soleado1.png" type="Texture" id=4]
+[ext_resource path="res://assets/arbol_templo_en_ruinas_soleado2.png" type="Texture" id=5]
+[ext_resource path="res://templo_en_ruinas_soleado.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 185, 19 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 39.75, 26.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 12.625, 13.0625 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 20.5, 72.75 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 29.5, 10.5 )
+
+[node name="templo_en_ruinas_soleado" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="TemploEnRuinasSoleado" type="Sprite" parent="."]
+position = Vector2( 513.103, 295.5 )
+scale = Vector2( 0.769305, 0.816406 )
+texture = ExtResource( 2 )
+
+[node name="pared" type="StaticBody2D" parent="."]
+position = Vector2( 67, 97 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared"]
+position = Vector2( 469, 542 )
+shape = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pared"]
+position = Vector2( -65, -94 )
+polygon = PoolVector2Array( 493, 323, 463, 317, 451, 304, 399, 283, 401, 220, 415, 197, 464, 173, 514, 158, 568, 167, 594, 180, 608, 152, 619, 150, 632, 161, 638, 215, 629, 219, 625, 228, 617, 238, 635, 260, 632, 272, 611, 289, 590, 297, 560, 335, 560, 286, 497, 286, 502, 338 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="pared"]
+polygon = PoolVector2Array( -85, 231, 32, 231, 56, 226, 72, 234, 109, 217, 150, 229, 169, 232, 189, 203, 218, 214, 229, 208, 282, 225, 308, 225, 333, 193, 332, 68, -82, 76 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="pared"]
+polygon = PoolVector2Array( 571, 102, 615, 106, 636, 88, 638, 134, 606, 137, 606, 160, 592, 155, 593, 178, 604, 174, 604, 234, 633, 229, 635, 271, 654, 283, 655, 321, 748, 324, 755, 285, 758, 245, 800, 245, 802, 295, 816, 293, 818, 323, 854, 326, 857, 288, 904, 290, 903, 323, 969, 325, 967, 7, 574, 26 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="pared"]
+polygon = PoolVector2Array( 328, 510, 331, 485, 334, 451, 319, 438, 312, 428, 328, 424, 352, 438, 364, 428, 369, 415, 367, 395, 362, 385, 362, 370, 362, 361, 347, 351, 335, 357, 331, 367, 331, 383, 297, 405, 285, 386, 272, 387, 281, 408, 274, 421, 251, 409, 245, 415, 231, 409, 227, 423, 216, 409, 210, 395, 194, 395, 190, 379, 177, 377, 174, 355, 142, 354, 143, 366, 134, 365, 125, 365, 130, 356, 105, 347, 78, 351, -44, 357, -66, 357, -71, 502 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="pared"]
+polygon = PoolVector2Array( 609, 519, 609, 502, 617, 498, 614, 488, 631, 484, 656, 478, 662, 472, 649, 465, 668, 462, 663, 439, 691, 437, 706, 451, 723, 448, 730, 461, 741, 460, 751, 509, 811, 509, 795, 484, 794, 456, 805, 439, 809, 418, 832, 450, 853, 451, 857, 474, 873, 468, 874, 444, 880, 447, 881, 426, 911, 422, 944, 415, 951, 422, 971, 401, 970, 321, 993, 328, 989, 526 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="pared"]
+position = Vector2( 236, 258 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="pared"]
+position = Vector2( 86, 265 )
+shape = SubResource( 3 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="pared"]
+polygon = PoolVector2Array( 387, 214, 379, 227, 361, 227, 350, 239, 378, 241, 411, 232, 430, 173, 511, 169, 506, 228, 556, 244, 555, 296, 580, 318, 596, 297, 594, 257, 581, 235, 542, 139, 384, 150 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="pared"]
+position = Vector2( 309, 363 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="pared"]
+position = Vector2( 554, 464 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="pared"]
+position = Vector2( 393, 288.063 )
+shape = SubResource( 3 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="player_atl" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 509, 524 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ArbolTemploEnRuinasSoleado1" type="Sprite" parent="YSort"]
+position = Vector2( 620, 523 )
+scale = Vector2( 0.886139, 0.938017 )
+texture = ExtResource( 4 )
+
+[node name="ArbolTemploEnRuinasSoleado2" type="Sprite" parent="YSort"]
+position = Vector2( 378, 426 )
+scale = Vector2( 0.881579, 0.887931 )
+texture = ExtResource( 5 )
+
+[node name="ArbolTemploEnRuinasSoleado3" type="Sprite" parent="."]
+position = Vector2( 68.25, 382.5 )
+scale = Vector2( 0.839366, 0.859223 )
+texture = ExtResource( 3 )
+
+[node name="entrada_pueblo" type="Area2D" parent="."]
+
+[node name="colision_pueblo" type="CollisionShape2D" parent="entrada_pueblo"]
+position = Vector2( -9, 391.25 )
+shape = SubResource( 4 )
+
+[node name="entrada_templo_soleado" type="Area2D" parent="."]
+
+[node name="colision_templo_soleado" type="CollisionShape2D" parent="entrada_templo_soleado"]
+position = Vector2( 846, 345 )
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="entrada_pueblo" to="." method="_on_entrada_pueblo_body_entered"]
