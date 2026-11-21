@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 8
+syntax_version = 2
+raw_text = "~ start
+Atl: ¿Qué es esto?
+Atl: Este fragmento parece formar parte de la estrella del centro."
+errors = [  ]
+titles = {"start": "1"}
+lines = {
+"0": {"next_id": "1", "text": "start", "type": "title"},
+"1": {"character": "Atl", "character_replacements": [  ], "next_id": "2", "replacements": [  ], "text": "¿Qué es esto?", "translation_key": "¿Qué es esto?", "type": "dialogue"},
+"2": {"character": "Atl", "character_replacements": [  ], "next_id": "", "replacements": [  ], "text": "Este fragmento parece formar parte de la estrella del centro.", "translation_key": "Este fragmento parece formar parte de la estrella del centro.", "type": "dialogue"}
+}

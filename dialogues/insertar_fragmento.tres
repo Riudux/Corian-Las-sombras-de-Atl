@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 8
+syntax_version = 2
+raw_text = "~ start
+Atl: El fragmento encaja aquí.
+Atl: Tal vez esto haga que el templo vuelva a despertar."
+errors = [  ]
+titles = {"start": "1"}
+lines = {
+"0": {"next_id": "1", "text": "start", "type": "title"},
+"1": {"character": "Atl", "character_replacements": [  ], "next_id": "2", "replacements": [  ], "text": "El fragmento encaja aquí.", "translation_key": "El fragmento encaja aquí.", "type": "dialogue"},
+"2": {"character": "Atl", "character_replacements": [  ], "next_id": "", "replacements": [  ], "text": "Tal vez esto haga que el templo vuelva a despertar.", "translation_key": "Tal vez esto haga que el templo vuelva a despertar.", "type": "dialogue"}
+}

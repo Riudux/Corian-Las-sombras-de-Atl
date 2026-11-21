@@ -17,4 +17,5 @@ func _ready():
 
 
 func _on_entrada_pueblo_body_entered(body):
-	pass # Replace with function body.
+	if body.name == "player_atl":
+		get_tree().change_scene("res://pueblo.tscn")

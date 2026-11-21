@@ -10,6 +10,9 @@ var escape_desbloqueado: bool = false
 var dialogo_cocina_visto: bool = false
 var dialogo_reclamo_visto: bool = false
 var tentacion_concha_vista: bool = false
+var tiene_fragmento_templo: bool = false
+var fragmento_incrustado: bool = false
+var fragmentos_obtenidos: int = 0
 
 
 # Called when the node enters the scene tree for the first time.

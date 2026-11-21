@@ -21,5 +21,5 @@ func _ready():
 
 
 func _on_entrada_templo_body_entered(body):
-	# Esta escena es el destino de la secuencia; no tiene retorno.
-	pass
+	if body.name == "player_atl":
+		get_tree().change_scene("res://interior_templo.tscn")

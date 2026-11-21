@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 8
+syntax_version = 2
+raw_text = "~ start
+Atl: Debo esperar a que mamá se vaya."
+errors = [  ]
+titles = {"start": "1"}
+lines = {
+"0": {"next_id": "1", "text": "start", "type": "title"},
+"1": {"character": "Atl", "character_replacements": [  ], "next_id": "", "replacements": [  ], "text": "Debo esperar a que mamá se vaya.", "translation_key": "Debo esperar a que mamá se vaya.", "type": "dialogue"}
+}
