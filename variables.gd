@@ -13,6 +13,14 @@ var tentacion_concha_vista: bool = false
 var tiene_fragmento_templo: bool = false
 var fragmento_incrustado: bool = false
 var fragmentos_obtenidos: int = 0
+# Progreso de la Aldea (Corian) y Minijuegos
+var hablo_con_tepache: bool = false
+var minijuego_1_ganado: bool = false
+var minijuego_2_ganado: bool = false # Para quitar al mapache del lago y dejar entrar a Atl
+var minijuego_3_ganado: bool = false
+
+# Para que perdiste.tscn sepa exactamente qué minijuego recargar
+var ultimo_minijuego: String = ""
 
 
 # Called when the node enters the scene tree for the first time.
