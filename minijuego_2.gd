@@ -203,6 +203,9 @@ func _completar_minijuego():
 	etiqueta_controles.text = "Minijuego completado"
 	variables.fragmentos_obtenidos = max(1, variables.fragmentos_obtenidos)
 	set_process(false)
+	variables.minijuego_2_ganado = true
+	yield(get_tree().create_timer(2.0), "timeout")
+	get_tree().change_scene("res://pueblo.tscn")
 
 func _actualizar_interfaz():
 	etiqueta_vidas.text = "Vidas: " + str(vidas)

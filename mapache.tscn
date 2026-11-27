@@ -85,6 +85,7 @@ tracks/0/keys = {
 extents = Vector2( 13.75, 14.5 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
+position = Vector2( -6, -17 )
 
 [node name="Mapache" type="Sprite" parent="."]
 position = Vector2( 457, 354 )

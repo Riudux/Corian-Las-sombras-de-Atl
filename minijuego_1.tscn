@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://mapache.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/bosque1.jpg" type="Texture" id=2]
+[ext_resource path="res://minijuego_1.gd" type="Script" id=3]
+[ext_resource path="res://player_atl.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 2, 0 )
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1375.0
+margin_bottom = 768.0
+rect_scale = Vector2( 0.742637, 0.780879 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+
+[node name="player_atl" parent="." instance=ExtResource( 4 )]
+position = Vector2( 463, 483 )
+scale = Vector2( 0.364625, 0.334185 )
+
+[node name="Mapache" parent="." instance=ExtResource( 1 )]
+position = Vector2( -105, 60 )
+scale = Vector2( 0.323388, 0.328551 )
+
+[node name="AvisoRobo" type="Label" parent="Mapache"]
+margin_left = 415.0
+margin_top = 207.0
+margin_right = 495.0
+margin_bottom = 221.0
+rect_pivot_offset = Vector2( -5, 1 )

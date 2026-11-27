@@ -101,12 +101,12 @@ texture = ExtResource( 3 )
 collision_mask = 2
 
 [node name="colision_pueblo" type="CollisionShape2D" parent="entrada_pueblo"]
-position = Vector2( -9, 391.25 )
+position = Vector2( 20, 402 )
 shape = SubResource( 4 )
 
-[node name="entrada_templo_soleado" type="Area2D" parent="."]
+[node name="EntradaTemplo" type="Area2D" parent="."]
 
-[node name="colision_templo_soleado" type="CollisionShape2D" parent="entrada_templo_soleado"]
+[node name="colision_templo_soleado" type="CollisionShape2D" parent="EntradaTemplo"]
 position = Vector2( 846, 345 )
 shape = SubResource( 5 )
 
